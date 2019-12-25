@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <meta content="noindex, nofollow" name="robots">
+    <link rel="stylesheet" type="text/css" href="sample.css">
+
+    <script src="sample.js"></script>
+</head>
+
+<body>
+    <div id="form">
+        <p id="head"></p>
+
+        <h2>Billing Details</h2>
+
+        <form onsubmit='return formValidation()' id="formid">
+		<table cellspacing="2" cellpadding="2" border="0.1">
+                <tr>
+                    <td>
+            <label>First Name :</label></td>
+            <td><input id='firstname' placeholder="first name" type='text' onkeyup="return formVal1()" onblur="return formVal1()"><br/>
+            <p id="p1"></p></td></tr>
+
+            <tr><td><label>Last name:</label></td>
+            <td><input id='lastname' type='text' placeholder="lastname" onkeyup="return formVal2()" onblur="return formVal2()"><br/>
+            <p id="p2"></p></td></tr>
+
+            <tr><td><label>Email:</label></td>
+            <td><input id='email' type='text' placeholder="enter email" onkeyup="return formVal3()" onblur="return formVal3()"><br/>
+            <p id="p3"></p></td></tr>
+
+
+
+            <tr><td style="padding-top: 0px;"><label>Address:</label></td>
+          <td><textarea rows="4" cols="60" id='addr' onblur="return formVal4()"  onkeyup="return formVal4()" placeholder="Street1"></textarea><br/>
+			<textarea rows="4" cols="60" id='address'  placeholder="Street2 is optional"></textarea><br/>
+			
+            <p id="p4"></p></td></tr>
+
+            <tr><td><label>Town or City:</label></td>
+            <td><input id='town' type='text' placeholder="City/Town" onkeyup="return formVal5()" onblur="return formVal5()" ><br/>
+            <p id="p5"></p></td></tr>
+
+            <tr><td><label>State:</label></td>
+            <td><select id='state' onclick="return formVal6()" onblur="return formVal6()">
+                <option>
+                    Please Choose
+                </option>
+                <option>
+                    Andhrapradesh
+                </option>
+                <option>
+                    Arunachal Pradesh
+                </option>
+                <option>
+                    Assam
+                </option>
+                <option>
+                    Bihar
+                </option>
+                <option>
+                    Chattisgarh
+                </option>
+                <option>
+                    Goa
+                </option>
+                <option>
+                    Gujarat
+                </option>
+            </select><br/>
+            <p id="p6"></p></td></tr>
+
+            <tr><td><label>Pin Code:</label></td>
+            <td><input id='pin' type='text' placeholder="6 digit pincode" onkeyup="return formVal7()" onblur="return formVal7()"><br/>
+            <p id="p7"></p></td></tr>
+            <tr><td><label>Mobile Number: </label></td>
+            <td><input type="text" name="Mobileno" id="mobileno" placeholder="mobile number" size="30" onkeyup="return formVal8()" onblur="return formVal8()"><br/>
+            <p id="p8"></p></td></tr>
+            <!-- <a href='sample1.html' style="text-decoration: none;">Click here to Shipping a different address?</a> <br/> -->
+           <tr><td> <input type="checkbox" id="ship" name="shipping" value="shipping" onclick="return myFunction()" /> Shipping to Different
+            address?</td></tr></table>
+
+        </form>
+    </div>
+
+    <div id="form1">
+       
+
+        <h2>Shipping Address</h2>
+
+        <form onsubmit='return formValidation()' id="formid1">
+		<table cellspacing="2" cellpadding="2" border="0.1">
+            <tr>
+            <td><label>First Name :</label></td>
+            <td><input id='firstname1' type='text' placeholder="first name" onkeyup="return formVal11()"><br/>
+            <p id="p11"></p></td></tr>
+
+            <tr><td><label>Last name:</label></td>
+            <td><input id='lastname1' type='text' placeholder="last name" onkeyup="return formVal22()"><br/>
+            <p id="p22"></p></td></tr>
+
+
+            <tr><td><label>Address:</label></td>
+            <td><textarea rows="4" cols="60" id='addr1'  onkeyup="return formVal44()" placeholder="Street1"></textarea><br/>
+			<textarea rows="4" cols="60" id='address1'  placeholder="Street2 is optional"></textarea>
+            <p id="p44"></p></td></tr>
+
+            <tr><td><label>Town/City:</label></td>
+            <td><input id='town1' type='text' placeholder="Town/City" onkeyup="return formVal55()"><br/>
+            <p id="p55"></p></td></tr>
+
+            <tr><td><label>State:</label></td>
+            <td><select id='state1' onclick="return formVal66()">
+                <option>
+                    Please Choose
+                </option>
+                <option>
+                    Andhrapradesh
+                </option>
+                <option>
+                    Arunachal Pradesh
+                </option>
+                <option>
+                    Assam
+                </option>
+                <option>
+                    Bihar
+                </option>
+                <option>
+                    Chattisgarh
+                </option>
+                <option>
+                    Goa
+                </option>
+                <option>
+                    Gujarat
+                </option>
+            </select><br/>
+            <p id="p66"></p></td></tr>
+
+            <tr><td><label>Pin Code:</label></td>
+            <td><input id='pin1' type='text' placeholder="6 digit pincode" onkeyup="return formVal77()"><br/>
+            <p id="p77"></p></td></tr></table>
+
+
+        </form>
+    </div>
+    <table><tr><td><input style="width:100%;" ; id="submit" type='submit' value='Submit' onclick="return formValidation()" /></td>
+    <td><input style="width:100%;"  type="button" onclick="myFun()" value="Reset" onclick="return myFun()"></td></tr>
+    </table><script>
+
+
+        function myFunction() {
+            var x = document.getElementById("form1");
+            if (x.style.display === "block") {
+               // alert("hello");
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+n            }
+        }
+
+    </script>
+
+</html>
